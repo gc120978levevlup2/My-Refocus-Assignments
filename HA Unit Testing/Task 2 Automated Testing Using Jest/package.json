@@ -1,0 +1,15 @@
+{
+  "name": "task-2-automated-testing-using-jest",
+  "version": "1.0.0",
+  "description": "Testing bmi_calculator.js using Jest Framework",
+  "main": "bmi_calculator.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}

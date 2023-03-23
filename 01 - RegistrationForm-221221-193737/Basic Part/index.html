@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Registration Form - Basic Parts</title>
+    <link type="text/css"  rel="stylesheet" href="./assets/css/style.css">
+    <script type="module" src="./assets/js/main.js"></script>
+</head>
+<body>
+    <form name="covidRegistration" class="covidRegistrationForm">
+        <div>
+            <h2>Vaccination Information Tracking Form</h2>
+        </div>
+
+        <div>
+            <label for="firstName">First Name</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="firstName">
+
+        <div>
+            <label for="middleName">Middle Name</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="middleName">
+
+        <div>
+            <label for="lastName">Last Name</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="lastName">
+        
+        <div>
+            <label for="birthDay">Birthday</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="date" name="birthDay">
+
+        <div>
+            <label for="birthDay">Email</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="email" name="email">
+
+        <div>
+            <label for="region">Region</label>
+            <label class="errorLabel"></label>
+        </div>
+        <select name="region" id="region"></select>
+
+        <div>
+            <label for="province">Province</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="province">
+        
+        <div>
+            <label for="barangay">Barangay</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="barangay">    
+        
+        <div>
+            <label for="street">Street</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="street">  
+
+        <div>
+            <label for="gender">Gender</label>
+            <label class="errorLabel"></label>
+        </div>
+        <div class="radioContainer">
+            <input type="radio" name="gender" value="Male"  ><label>Male  </label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" value="Female"><label>Female</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" value="Other" ><label>Other </label> &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div>
+            <label for="vaxDose1">Vaccination Brand (Dose 1)</label>
+            <label class="errorLabel"></label>
+        </div>
+        <select name="vaxDose1" id="vaxDose1"></select>
+
+        <div>
+            <label for="vaxDose1Date">Date of Vaccination (Dose 1)</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="date" name="vaxDose1Date">
+
+        <div>
+            <label for="vaxDose1Site">Vaccination (Dose 1) Site</label>
+            <label class="errorLabel"></label>
+        </div>
+        <input type="text" name="vaxDose1Site">  
+
+        <div>
+            <label for="isVax2">Did you already get your second vaccination?</label>
+            <label class="errorLabel"></label>
+        </div>
+        <div class="radioContainer">
+            <input type="radio" name="isVax2" value="true"  id="isVax2yes"><label>Yes</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="isVax2" value="false" id="isVax2no" ><label>No </label> &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="isVax2 disableDiv">
+            <div>
+                <label for="vaxDose2">Vaccination Brand (Dose 2)</label>
+                <label class="errorLabel"></label>
+            </div>
+            <select name="vaxDose2" id="vaxDose2"></select>
+    
+            <div>
+                <label for="vaxDose2Date">Date of Vaccination (Dose 2)</label>
+                <label class="errorLabel"></label>
+            </div>
+            <input type="date" name="vaxDose2Date">
+
+            <div>
+                <label for="vaxDose2Site">Vaccination (Dose 2) Site</label>
+                <label class="errorLabel"></label>
+            </div>
+            <input type="text" name="vaxDose2Site">  
+        </div>
+
+        <div>
+            <input type="submit" class="submitButton">
+        </div>
+    </form>
+</body>
+</html>

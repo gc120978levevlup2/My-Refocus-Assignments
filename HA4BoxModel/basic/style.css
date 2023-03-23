@@ -1,0 +1,20 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    border: 1px solid;
+    border-color: grey;
+    padding: 16px;
+    width: 400px;
+    height: 400px;
+}
+
+section h1{
+    margin-bottom: 14px;
+}
+
+section p{
+    color: red;
+    padding-right: 38px;
+}

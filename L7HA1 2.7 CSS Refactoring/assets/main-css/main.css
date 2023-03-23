@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px;
+  place-items: center;
+}
+.container .triangle-left {
+  margin: 0;
+  padding: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid blue;
+}
+.container .triangle-up {
+  margin: 0;
+  padding: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid orange;
+}
+.container .triangle-down {
+  margin: 0;
+  padding: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid red;
+}
+.container .triangle-right {
+  margin: 0;
+  padding: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid green;
+}
+.container .ellipse-horizontal {
+  width: 180px;
+  height: 90px;
+  border-radius: 50%;
+}
+.container .ellipse-vertical {
+  width: 90px;
+  height: 180px;
+  border-radius: 50%;
+}
+.container .rectangle-horizontal {
+  width: 120px;
+  height: 80px;
+}
+.container .rectangle-vertical {
+  width: 80px;
+  height: 120px;
+}
+.container .orange {
+  background-color: orange;
+}
+.container .red {
+  background-color: red;
+}
+.container .green {
+  background-color: green;
+}
+.container .blue {
+  background-color: blue;
+}/*# sourceMappingURL=main.css.map */

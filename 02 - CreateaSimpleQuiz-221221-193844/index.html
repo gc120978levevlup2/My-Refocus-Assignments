@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simple Quiz</title>
+		<style>
+			.result-question {
+				text-align: left;
+			}
+			.wrong-answer {
+				color: red;
+			}
+			.right-answer {
+				color: green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Simple Quiz</h1>
+
+		<form name="quiz" id="quiz-form">
+			<div class="form-control">
+				<div>
+					Question 1: What is the capital of the Philippines? <br />
+					<!-- Enter field for question 1 here -->
+					<input type="text" name="ans1" id="ans1" />
+					<div id="result-question1" class="result-question"></div>
+					<br /><br />
+				</div>
+			</div>
+			<div class="form-control">
+				<div>
+					Question 2: What is the value of x? x = 3 + 2*5<br />
+					<!-- Enter options for question 2 here -->
+					<div>
+						<div>
+							<label for="ans2-choice1">
+								<input
+									type="radio"
+									name="ans2"
+									id="ans2-choice1"
+									value="x = 25" />
+								<span>x = 25</span><br />
+							</label>
+						</div>
+						<div>
+							<label for="ans2-choice2">
+								<input
+									type="radio"
+									name="ans2"
+									id="ans2-choice2"
+									value="x = 13" />
+								<span>x = 13</span><br />
+							</label>
+						</div>
+						<div>
+							<label for="ans2-choice3">
+								<input
+									type="radio"
+									name="ans2"
+									id="ans2-choice3"
+									value="x = 2" />
+								<span>x = 28</span><br />
+							</label>
+						</div>
+					</div>
+					<div id="result-question2" class="result-question"></div>
+					<br /><br />
+				</div>
+			</div>
+			<div class="form-control">
+				<div>
+					Question 3: Which of the following birds can fly? Choose 3 correct
+					answers.<br />
+					<!-- Enter options for question 3 here -->
+					<div>
+						<div>
+							<label for="ans3-choice1">
+								<input
+									type="checkbox"
+									name="ans3"
+									id="ans3-choice1"
+									value="1" />
+								<span>parrot</span><br />
+							</label>
+						</div>
+						<div>
+							<label for="ans3-choice2">
+								<input
+									type="checkbox"
+									name="ans3"
+									id="ans3-choice2"
+									value="2" />
+								<span>eagle</span><br />
+							</label>
+						</div>
+						<div>
+							<label for="ans3-choice3">
+								<input
+									type="checkbox"
+									name="ans3"
+									id="ans3-choice3"
+									value="4" />
+								<span>penguin</span><br />
+							</label>
+						</div>
+						<div>
+							<label for="ans3-choice4">
+								<input
+									type="checkbox"
+									name="ans3"
+									id="ans3-choice4"
+									value="8" />
+								<span>crow</span><br />
+							</label>
+						</div>
+					</div>
+					<div id="result-question3" class="result-question"></div>
+					<br /><br />
+				</div>
+			</div>
+			<div class="form-control">
+				<button type="submit" name="submitBtn">Submit</button>
+				<button type="reset" name="resetBtn">Reset</button>
+			</div>
+		</form>
+
+		<script type="text/javascript">
+			const form = document.forms.quiz;
+			// get the values of each form here
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault();
+				checkQuestion1();
+				checkQuestion2();
+				checkQuestion3();
+			});
+
+			form.addEventListener('reset', function (event) {
+				event.preventDefault();
+				// Add more reset of inputs here
+				document.getElementById('result-question1').innerText = '';
+				document.getElementById('result-question2').innerText = '';
+				document.getElementById('result-question3').innerText = '';
+			});
+
+			function checkQuestion1() {
+				// Enter validation for question 1 here
+				if (!form.ans1.value) {
+					document
+						.querySelector('#result-question1')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question1')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question1').innerText =
+						'You must enter an answer!';
+					return;
+				}
+				const answer = 'MANILA';
+				if (form.ans1.value.toUpperCase().includes(answer)) {
+					document
+						.querySelector('#result-question1')
+						.classList.add('right-answer');
+					document
+						.querySelector('#result-question1')
+						.classList.remove('wrong-answer');
+					document.getElementById('result-question1').innerText =
+						'Question 1 answer is correct!';
+				} else {
+					document
+						.querySelector('#result-question1')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question1')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question1').innerText =
+						'Question 1 answer is incorrect!';
+				}
+			}
+
+			function checkQuestion2() {
+				// Enter validation for question 2 here
+				if (!form.ans2.value) {
+					document
+						.querySelector('#result-question2')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question2')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question2').innerText =
+						'You must enter an answer!';
+					return;
+				}
+				const answer = 'x = 13';
+				if (form.ans2.value === answer) {
+					document
+						.querySelector('#result-question2')
+						.classList.add('right-answer');
+					document
+						.querySelector('#result-question2')
+						.classList.remove('wrong-answer');
+					document.getElementById('result-question2').innerText =
+						'Question 2 answer is correct!';
+				} else {
+					document
+						.querySelector('#result-question2')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question2')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question2').innerText =
+						'Question 2 answer is incorrect!';
+				}
+			}
+
+			function checkQuestion3() {
+				// Enter validation for question 3 here
+				let ans3 = 0;
+				for (let ans of form.ans3) {
+					if (ans.checked) {
+						ans3 += parseInt(ans.value);
+					}
+				}
+				if (!ans3) {
+					document
+						.querySelector('#result-question3')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question3')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question3').innerText =
+						'You must enter an answer!';
+					return;
+				}
+				const answer = 1 + 2 + 8;
+				if (ans3 === answer) {
+					document
+						.querySelector('#result-question3')
+						.classList.add('right-answer');
+					document
+						.querySelector('#result-question3')
+						.classList.remove('wrong-answer');
+					document.getElementById('result-question3').innerText =
+						'Question 3 answer is correct!';
+				} else {
+					document
+						.querySelector('#result-question3')
+						.classList.remove('right-answer');
+					document
+						.querySelector('#result-question3')
+						.classList.add('wrong-answer');
+					document.getElementById('result-question3').innerText =
+						'Question 3 answer is incorrect!';
+				}
+			}
+		</script>
+	</body>
+</html>

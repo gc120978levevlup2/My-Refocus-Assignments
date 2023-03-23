@@ -1,0 +1,23 @@
+*{
+    color: aquamarine;
+}
+
+.blue {
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+
+.containter-1 .blue{
+    color:purple;
+}
+
+section p{
+    color:pink;
+}
+
+p{
+    color:grey;
+}

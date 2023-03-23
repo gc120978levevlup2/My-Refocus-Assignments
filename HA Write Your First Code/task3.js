@@ -1,0 +1,1 @@
+console.log("Some day I will build a superb e-commerce web app that will be helpfull to a myriad of SME's");

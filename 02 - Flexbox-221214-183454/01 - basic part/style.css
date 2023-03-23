@@ -1,0 +1,21 @@
+
+/* BASIC PART*/
+
+.aqua-box-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.bisque-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.blueviolet-box-container{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}

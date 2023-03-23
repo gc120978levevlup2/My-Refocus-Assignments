@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #4af6ae;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero{
+    width: 100vw;
+}
+
+.banner-container{
+    display: flex;
+    justify-content: center;
+}
+
+.banner{
+    position: relative;
+    top: -100px;
+    width: 70%;
+    padding: 30px 20px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap:30px;
+}
+
+.banner-text{
+    margin-left: 5%;
+    width: 80%;
+    border-left: 6px solid #525453;
+    padding: 9px 0px 9px 12px;
+    grid-row: span 1;
+}
+
+.cta-container{
+    grid-row: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-button {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in;
+    background-color: cyan;
+}
+
+.cta-button:hover{
+    scale: 1.05;
+}
+
+.cta-button:active{
+    transform: translateY(4px);
+}
+
+.cred{
+    background-color: red;
+}
+
+.institutions-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.institutions{
+    background-color: white;
+    padding: 20px;
+    border: 3px solid black;
+    width: 70%;
+    padding: 30px 20px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+
+.up-logo{
+    justify-self: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.deped-logo{
+    justify-self: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.inst-paragraph{
+    justify-self: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media only screen and (min-width: 650px){
+    .institutions{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .up-logo{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .deped-logo{
+        justify-self: center;
+        grid-column: span 1;
+    }
+    
+    .inst-paragraph{
+        justify-self: center;
+        grid-column: span 5;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .cta-button {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .banner, .institutions{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 2000px){
+    .banner{
+        scale: 1.5;
+    }
+    .banner, .institutions{
+        width: 30%;
+    }
+}

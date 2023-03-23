@@ -1,0 +1,15 @@
+.h1-class{
+    color: red;
+}
+
+#h1-id{
+    color: blue;
+}
+
+h2{
+    color:gray;
+}
+
+:root{
+    color:purple;
+}
